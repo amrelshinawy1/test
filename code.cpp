@@ -14,6 +14,13 @@ using namespace std;
 
 char grid[100][100];
 
+//Print String using printf
+void sprint(const string &str){
+	int length = str.length();
+	for(int i=0; i<length; ++i)
+        printf("%c",str[i]);
+}
+
 //int number of 1`s
 //(i,j) start point of region
 int out_img(int i,int j,int n,const int &t){
@@ -32,7 +39,7 @@ int out_img(int i,int j,int n,const int &t){
     int lr=out_img( i+Hn ,j+Hn ,Hn ,t );	//lower-right
 
     //count 1
-    int sum1 = 0;
+    int sum1 = 10;
     sum1 += ur;
     sum1 += ul;
     sum1 += ll;
